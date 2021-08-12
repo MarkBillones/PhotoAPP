@@ -2,7 +2,7 @@
 //  File.swift
 //  MyPhotoApp
 //
-//  Created by OPSolutions on 8/11/21.
+//  Created by OPSolutions Billones on 8/11/21.
 //
 
 import Foundation
@@ -102,7 +102,6 @@ extension GalleryViewController: UICollectionViewDelegate {
 extension GalleryViewController: UICollectionViewDelegateFlowLayout {
     //sizeforitem
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return  CGSize(width: screenSize.size.width, height: 300)
-        //screenSize.size.width
+        return  CGSize(width: screenSize.size.width, height: 400) //custom screen height 300pts
     }
 }
