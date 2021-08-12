@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" restorationIdentifier="PhotoCollectionViewCell" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GKh-io-PRP">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="iQF-9J-ulp">
                                     <size key="itemSize" width="410" height="310"/>
@@ -99,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1834.7826086956522" y="83.705357142857139"/>
+            <point key="canvasLocation" x="1745" y="398"/>
         </scene>
         <!--Full-Screen-->
         <scene sceneID="Adv-fp-XMN">
@@ -130,13 +130,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CzL-hA-tUL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2547.826086956522" y="128.57142857142856"/>
+            <point key="canvasLocation" x="2593" y="771"/>
         </scene>
         <!--Gallery-->
         <scene sceneID="ZvD-EY-tv1">
             <objects>
                 <navigationController title="Gallery" automaticallyAdjustsScrollViewInsets="NO" id="0GH-lo-3FX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Gallery" image="photo.on.rectangle.angled" catalog="system" selectedImage="photo.on.rectangle.fill" id="RyF-iG-qh8"/>
+                    <tabBarItem key="tabBarItem" title="GalleryPP" image="photo.on.rectangle.angled" catalog="system" selectedImage="photo.on.rectangle.fill" id="RyF-iG-qh8"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="mUR-p3-KDJ">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -168,7 +168,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8nv-1k-UPC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
+            <point key="canvasLocation" x="478" y="-684"/>
         </scene>
         <!--Preferences-->
         <scene sceneID="X9e-4K-O7z">
@@ -184,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XG6-38-FlH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="939.13043478260875" y="770.75892857142856"/>
+            <point key="canvasLocation" x="-635" y="771"/>
         </scene>
         <!--Preferences-->
         <scene sceneID="YCi-a2-JZc">
@@ -203,7 +203,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6A4-B3-fHf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28.985507246376812" y="770.75892857142856"/>
+            <point key="canvasLocation" x="-30" y="84"/>
         </scene>
     </scenes>
     <resources>
