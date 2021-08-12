@@ -15,7 +15,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     
     var photo: Photo! {
         didSet {
-            self.descriptionLabel.text = photo.description ?? "no description"//
+            self.descriptionLabel.text = photo.description ?? "BetterMarkPhotography"//
             
             guard let url = URL(string: photo.urls.regular) else {
                 return

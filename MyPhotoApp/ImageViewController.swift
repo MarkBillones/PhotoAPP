@@ -9,7 +9,6 @@ import UIKit
 
 class ImageViewController: UIViewController {
 
-    @IBOutlet weak var imageViewController: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

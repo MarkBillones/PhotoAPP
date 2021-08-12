@@ -22,6 +22,9 @@
 		5B1A9AAA26C36F69006B6C03 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A9AA926C36F69006B6C03 /* APIKey.swift */; };
 		5B1A9AAD26C37C7A006B6C03 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A9AAC26C37C7A006B6C03 /* PhotoCollectionViewCell.swift */; };
 		5B1A9AB026C38785006B6C03 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A9AAF26C38785006B6C03 /* Client.swift */; };
+		5B261FCA26C4AC8700C65A38 /* FullScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B261FC926C4AC8700C65A38 /* FullScreenViewController.swift */; };
+		5B940D0E26C413A100FC4D0C /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B940D0D26C413A100FC4D0C /* JSONParser.swift */; };
+		5B940D1026C41EE600FC4D0C /* UnsplashAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B940D0F26C41EE600FC4D0C /* UnsplashAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		5B1A9AA926C36F69006B6C03 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		5B1A9AAC26C37C7A006B6C03 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		5B1A9AAF26C38785006B6C03 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		5B261FC926C4AC8700C65A38 /* FullScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenViewController.swift; sourceTree = "<group>"; };
+		5B940D0D26C413A100FC4D0C /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		5B940D0F26C41EE600FC4D0C /* UnsplashAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAPI.swift; sourceTree = "<group>"; };
 		BA0BE347DAAA64EA10D955D9 /* Pods-MyPhotoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPhotoApp.debug.xcconfig"; path = "Target Support Files/Pods-MyPhotoApp/Pods-MyPhotoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F77754D2A9AD2BDF65485077 /* Pods_MyPhotoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPhotoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -88,6 +94,7 @@
 				5B1A9A9826C35E06006B6C03 /* LaunchScreen.storyboard */,
 				5B1A9A9B26C35E06006B6C03 /* Info.plist */,
 				5B1A9A9326C35E04006B6C03 /* MyPhotoApp.xcdatamodeld */,
+				5B1A9A8E26C35E04006B6C03 /* ImageViewController.swift */,
 			);
 			path = MyPhotoApp;
 			sourceTree = "<group>";
@@ -95,11 +102,13 @@
 		5B1A9AAB26C376E7006B6C03 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				5B1A9AAF26C38785006B6C03 /* Client.swift */,
 				5B1A9AA526C365E3006B6C03 /* NetworkingOnApp.swift */,
-				5B1A9AA926C36F69006B6C03 /* APIKey.swift */,
 				5B1A9AA726C366F4006B6C03 /* Protocol.swift */,
 				5B1A9AA326C3635C006B6C03 /* APIModels.swift */,
-				5B1A9AAF26C38785006B6C03 /* Client.swift */,
+				5B940D0D26C413A100FC4D0C /* JSONParser.swift */,
+				5B1A9AA926C36F69006B6C03 /* APIKey.swift */,
+				5B940D0F26C41EE600FC4D0C /* UnsplashAPI.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -109,7 +118,7 @@
 			children = (
 				5B1A9AA126C362FE006B6C03 /* GalleryViewController.swift */,
 				5B1A9AAC26C37C7A006B6C03 /* PhotoCollectionViewCell.swift */,
-				5B1A9A8E26C35E04006B6C03 /* ImageViewController.swift */,
+				5B261FC926C4AC8700C65A38 /* FullScreenViewController.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -247,11 +256,14 @@
 			files = (
 				5B1A9AA426C3635C006B6C03 /* APIModels.swift in Sources */,
 				5B1A9AAD26C37C7A006B6C03 /* PhotoCollectionViewCell.swift in Sources */,
+				5B940D0E26C413A100FC4D0C /* JSONParser.swift in Sources */,
 				5B1A9AA226C362FE006B6C03 /* GalleryViewController.swift in Sources */,
 				5B1A9A9526C35E04006B6C03 /* MyPhotoApp.xcdatamodeld in Sources */,
+				5B261FCA26C4AC8700C65A38 /* FullScreenViewController.swift in Sources */,
 				5B1A9AB026C38785006B6C03 /* Client.swift in Sources */,
 				5B1A9AA826C366F4006B6C03 /* Protocol.swift in Sources */,
 				5B1A9AA626C365E3006B6C03 /* NetworkingOnApp.swift in Sources */,
+				5B940D1026C41EE600FC4D0C /* UnsplashAPI.swift in Sources */,
 				5B1A9A8F26C35E04006B6C03 /* ImageViewController.swift in Sources */,
 				5B1A9A8B26C35E04006B6C03 /* AppDelegate.swift in Sources */,
 				5B1A9AAA26C36F69006B6C03 /* APIKey.swift in Sources */,
