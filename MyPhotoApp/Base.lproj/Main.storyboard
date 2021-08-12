@@ -83,6 +83,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="W3F-jS-tTh">
                         <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="hbE-os-ESf">
+                            <rect key="frame" x="33" y="5.5" width="348" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="First"/>
+                                <segment title="Second"/>
+                                <segment title="Third"/>
+                            </segments>
+                        </segmentedControl>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="GKh-io-PRP" id="ZEg-Pm-LLd"/>
