@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -17,8 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOADING..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wrf-SF-JdR">
+                                <rect key="frame" x="142.5" y="431.5" width="129" height="33"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" restorationIdentifier="PhotoCollectionViewCell" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GKh-io-PRP">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="iQF-9J-ulp">
                                     <size key="itemSize" width="807" height="305"/>
@@ -82,11 +89,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                        <color key="tintColor" systemColor="systemOrangeColor"/>
                         <constraints>
+                            <constraint firstItem="Wrf-SF-JdR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1VW-EK-SDa"/>
                             <constraint firstItem="GKh-io-PRP" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="3zW-Cp-sf1"/>
                             <constraint firstItem="GKh-io-PRP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Uas-E3-pPe"/>
                             <constraint firstItem="GKh-io-PRP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zd5-ZH-IZa"/>
+                            <constraint firstItem="Wrf-SF-JdR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fX1-WE-3gU"/>
                             <constraint firstItem="GKh-io-PRP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="okN-UA-3kN"/>
                         </constraints>
                     </view>
@@ -96,10 +104,13 @@
                             <rect key="frame" x="33" y="5.5" width="348" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
-                                <segment title="First"/>
-                                <segment title="Second"/>
-                                <segment title="Third"/>
+                                <segment title="Latest"/>
+                                <segment title="Oldest"/>
+                                <segment title="Popular"/>
                             </segments>
+                            <connections>
+                                <action selector="filterChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="nmf-Zj-qRG"/>
+                            </connections>
                         </segmentedControl>
                     </navigationItem>
                     <connections>
@@ -145,7 +156,10 @@
         <scene sceneID="ZvD-EY-tv1">
             <objects>
                 <navigationController title="Gallery" automaticallyAdjustsScrollViewInsets="NO" id="0GH-lo-3FX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Gallery" image="photo.on.rectangle.angled" catalog="system" selectedImage="photo.on.rectangle.fill" id="RyF-iG-qh8"/>
+                    <tabBarItem key="tabBarItem" title="Gallery" id="RyF-iG-qh8">
+                        <imageReference key="image" image="photo.on.rectangle.angled" catalog="system" renderingMode="original"/>
+                        <imageReference key="selectedImage" image="photo.on.rectangle.fill" catalog="system" renderingMode="original"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="mUR-p3-KDJ">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -168,7 +182,6 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mPI-Z0-ZkX">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="0GH-lo-3FX" kind="relationship" relationship="viewControllers" id="dde-e1-g6U"/>
@@ -199,7 +212,10 @@
         <scene sceneID="YCi-a2-JZc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pFH-dp-N9M" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Preferences" image="gearshape" catalog="system" selectedImage="gearshape.fill" id="lcJ-30-pD2"/>
+                    <tabBarItem key="tabBarItem" title="Preferences" id="lcJ-30-pD2">
+                        <imageReference key="image" image="gearshape" catalog="system" renderingMode="original"/>
+                        <imageReference key="selectedImage" image="gearshape.fill" catalog="system" symbolScale="default" renderingMode="original"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="biP-Ge-UPL">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

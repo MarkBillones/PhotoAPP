@@ -17,6 +17,7 @@ class PersistentController {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
+        //this is to print in debug area the location of your data base
         print(container.persistentStoreDescriptions.first?.url as Any)
         return container
     }()
@@ -35,9 +36,41 @@ class PersistentController {
         }
     }
     
-    func insert(_ photo: Photo) {
-        let photoEntity = NSEntityDescription.entity(forEntityName: "PhotoModel", in: self.persistentContainer.viewContext)
-        let model = PhotoModel(entity: photoEntity!, insertInto: self.persistentContainer.viewContext)
-        model.url = photo.urls.regular
+    func insertPhoto(_ photo: Photo) {
+//        let photoEntity = NSEntityDescription.entity(forEntityName: "PhotoModel", in: self.persistentContainer.viewContext)
+//        let model = PhotoModel(entity: photoEntity!, insertInto: self.persistentContainer.viewContext)
+//        model.url = photo.urls.regular
+//        saveContext()
+        let context = persistentContainer.viewContext
+        
+        let userEntity = NSEntityDescription.entity(forEntityName: "UserModel", in: context)
+        let userModel = UserModel(entity: userEntity!, insertInto: context)
+        
+        userModel.name = photo.user.name
+        userModel.profileImage = photo.user.profileImage.medium
+        
+        let photoEntity = NSEntityDescription.entity(forEntityName: "PhotoModel", in: context)
+        let photoModel = PhotoModel(entity: photoEntity!, insertInto: context)
+        photoModel.url = photo.urls.regular
+        photoModel.desc = photo.description
+        
+        //set relationship
+        photoModel.user = userModel
+        userModel.photo = photoModel
+        
+        saveContext()
+    }
+    
+    func truncate(entityModel: String) {
+        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: entityModel)
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetch)
+        
+        do {
+            _ = try persistentContainer.viewContext.execute(deleteRequest)
+        } catch {
+            fatalError("Failed to execute request: \(error)")
+        }
     }
 }
+//global na sya, pwedeng maaccess
+let DB = PersistentController.shared

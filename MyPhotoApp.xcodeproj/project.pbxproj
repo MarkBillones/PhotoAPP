@@ -24,6 +24,10 @@
 		5B261FCA26C4AC8700C65A38 /* FullScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B261FC926C4AC8700C65A38 /* FullScreenViewController.swift */; };
 		5B46A03726C612FE00D3396F /* PhotoGallery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B46A03526C612FE00D3396F /* PhotoGallery.xcdatamodeld */; };
 		5B46A03A26C6145500D3396F /* PersistentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B46A03926C6145500D3396F /* PersistentController.swift */; };
+		5B46A04726C6260700D3396F /* UserModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B46A04326C6260700D3396F /* UserModel+CoreDataClass.swift */; };
+		5B46A04826C6260700D3396F /* UserModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B46A04426C6260700D3396F /* UserModel+CoreDataProperties.swift */; };
+		5B46A04926C6260700D3396F /* PhotoModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B46A04526C6260700D3396F /* PhotoModel+CoreDataClass.swift */; };
+		5B46A04A26C6260700D3396F /* PhotoModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B46A04626C6260700D3396F /* PhotoModel+CoreDataProperties.swift */; };
 		5B940D0E26C413A100FC4D0C /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B940D0D26C413A100FC4D0C /* JSONParser.swift */; };
 		5B940D1026C41EE600FC4D0C /* UnsplashAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B940D0F26C41EE600FC4D0C /* UnsplashAPI.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +52,10 @@
 		5B261FC926C4AC8700C65A38 /* FullScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenViewController.swift; sourceTree = "<group>"; };
 		5B46A03626C612FE00D3396F /* PhotoGallery.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PhotoGallery.xcdatamodel; sourceTree = "<group>"; };
 		5B46A03926C6145500D3396F /* PersistentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentController.swift; sourceTree = "<group>"; };
+		5B46A04326C6260700D3396F /* UserModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserModel+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		5B46A04426C6260700D3396F /* UserModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserModel+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		5B46A04526C6260700D3396F /* PhotoModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoModel+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		5B46A04626C6260700D3396F /* PhotoModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoModel+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		5B940D0D26C413A100FC4D0C /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		5B940D0F26C41EE600FC4D0C /* UnsplashAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAPI.swift; sourceTree = "<group>"; };
 		BA0BE347DAAA64EA10D955D9 /* Pods-MyPhotoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPhotoApp.debug.xcconfig"; path = "Target Support Files/Pods-MyPhotoApp/Pods-MyPhotoApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,10 +115,10 @@
 				5B1A9AAF26C38785006B6C03 /* Client.swift */,
 				5B1A9AA526C365E3006B6C03 /* NetworkingOnApp.swift */,
 				5B1A9AA726C366F4006B6C03 /* Protocol.swift */,
+				5B940D0F26C41EE600FC4D0C /* UnsplashAPI.swift */,
 				5B1A9AA326C3635C006B6C03 /* APIModels.swift */,
 				5B940D0D26C413A100FC4D0C /* JSONParser.swift */,
 				5B1A9AA926C36F69006B6C03 /* APIKey.swift */,
-				5B940D0F26C41EE600FC4D0C /* UnsplashAPI.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -129,6 +137,10 @@
 		5B46A03826C6142100D3396F /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				5B46A04326C6260700D3396F /* UserModel+CoreDataClass.swift */,
+				5B46A04426C6260700D3396F /* UserModel+CoreDataProperties.swift */,
+				5B46A04526C6260700D3396F /* PhotoModel+CoreDataClass.swift */,
+				5B46A04626C6260700D3396F /* PhotoModel+CoreDataProperties.swift */,
 				5B46A03926C6145500D3396F /* PersistentController.swift */,
 			);
 			path = CoreData;
@@ -275,10 +287,14 @@
 				5B261FCA26C4AC8700C65A38 /* FullScreenViewController.swift in Sources */,
 				5B1A9AB026C38785006B6C03 /* Client.swift in Sources */,
 				5B1A9AA826C366F4006B6C03 /* Protocol.swift in Sources */,
+				5B46A04826C6260700D3396F /* UserModel+CoreDataProperties.swift in Sources */,
 				5B1A9AA626C365E3006B6C03 /* NetworkingOnApp.swift in Sources */,
 				5B940D1026C41EE600FC4D0C /* UnsplashAPI.swift in Sources */,
+				5B46A04726C6260700D3396F /* UserModel+CoreDataClass.swift in Sources */,
 				5B1A9A8B26C35E04006B6C03 /* AppDelegate.swift in Sources */,
 				5B1A9AAA26C36F69006B6C03 /* APIKey.swift in Sources */,
+				5B46A04926C6260700D3396F /* PhotoModel+CoreDataClass.swift in Sources */,
+				5B46A04A26C6260700D3396F /* PhotoModel+CoreDataProperties.swift in Sources */,
 				5B1A9A8D26C35E04006B6C03 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
