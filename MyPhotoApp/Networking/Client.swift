@@ -12,7 +12,7 @@ let baseURL = "https://api.unsplash.com"
 class APIClient {
     func fetchS(resource: String, orderBy: String = "latest", completionHandler: @escaping (Data?, URLResponse?, String?) -> Void) {
         let session = URLSession(configuration: .default)
-        let url = URL(string: "\(baseURL)/\(resource)?client_id=\(APIKey)&order_by\(orderBy)")
+        let url = URL(string: "\(baseURL)/\(resource)?page=\(orderBy)&per_page=30&order_by=latest&client_id=\(APIKey)")
         
         guard let url = url else {
             completionHandler(nil, nil, "Url is nil")

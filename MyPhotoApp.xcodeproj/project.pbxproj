@@ -119,8 +119,8 @@
 		5B1A9AAB26C376E7006B6C03 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				5B1A9AAF26C38785006B6C03 /* Client.swift */,
 				5B940D0F26C41EE600FC4D0C /* UnsplashAPI.swift */,
+				5B1A9AAF26C38785006B6C03 /* Client.swift */,
 				5B940D0D26C413A100FC4D0C /* JSONParser.swift */,
 				5B1A9AA326C3635C006B6C03 /* APIModels.swift */,
 				5B1A9AA926C36F69006B6C03 /* APIKey.swift */,

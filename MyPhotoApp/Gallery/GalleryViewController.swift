@@ -13,7 +13,7 @@ class GalleryViewController: UIViewController {
     private let cellIdentifier = "PhotoCollectionViewCell"
     private var photos = [Photo]()  //from private var photos: [Photo] = []
     @IBOutlet weak var collectionView: UICollectionView!
-    let filterKeywords = ["latest","oldest","popular"]
+    let filterKeywords = ["1","2","3"]
     var currentFilterIndex = 0
     
     override func viewDidLoad() {
