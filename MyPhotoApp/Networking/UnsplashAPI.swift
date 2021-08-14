@@ -20,7 +20,7 @@ class UnsplashAPI {
     let client = APIClient()
     
     func getPhotos(filterKeywords: String, resultBlock: @escaping ([Photo]?, PhotoAPIError?) -> Void) {
-    
+        //accepting the variable orderBy, because it already has value
         client.fetchS(resource: UnsplashAPIEndopints.photos, orderBy: filterKeywords) { data, _, errorMessage in
             
             if let error = errorMessage {

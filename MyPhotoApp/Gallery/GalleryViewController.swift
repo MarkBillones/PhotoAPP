@@ -16,20 +16,16 @@ class GalleryViewController: UIViewController {
     let filterKeywords = ["latest","oldest","popular"]
     var currentFilterIndex = 0
     
-    fileprivate func networkFetching() {
-        let network = Networking()
-        network.fetch(resource: "photos", model: Photo.self) { results in
-            self.photos = results as! [Photo]
-            self.collectionView.reloadData()
-            print(results)
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
         fetchPhotos()
         self.navigationItem.title = "Gallery"  //set title programmatically
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        newUserConfiguraton()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -44,7 +40,7 @@ class GalleryViewController: UIViewController {
               let selectedIndexPath = selectedIndexPaths.first else {
             return
         }
-
+        
         let photo = photos[selectedIndexPath.row]
         fullScreenVC.imageURL = photo.urls.regular
     }
@@ -53,6 +49,16 @@ class GalleryViewController: UIViewController {
         let segmentedControl = sender
         currentFilterIndex =  segmentedControl.selectedSegmentIndex
         fetchPhotos()
+    }
+    
+    fileprivate func newUserConfiguraton() {
+        if Core.shared.isNewUser(){
+            //show the onboarding flow
+            let viewController = storyboard?.instantiateViewController(identifier: "welcomeViewController") as! WelcomeViewController
+            //the newer version of ios, the user can swipe down  your welcome flow
+            viewController.modalPresentationStyle = .fullScreen
+            present(viewController, animated: true)
+        }
     }
     
     fileprivate func fetchPhotos() {
@@ -121,4 +127,19 @@ extension GalleryViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return  CGSize(width: screenSize.size.width, height: 400) //custom screen height 300pts
     }
+}
+
+//standard View Controller after the Onboarding Flow
+class Core {
+    
+    static let shared = Core()
+    
+    func isNewUser() -> Bool {//to make it true
+        return !UserDefaults.standard.bool(forKey: "isNewUser")
+    }
+    //once the person has dismissd the welcome flow
+    func isNotNewUser() {
+        UserDefaults.standard.set(true, forKey: "isNewUser")
+    }
+    
 }

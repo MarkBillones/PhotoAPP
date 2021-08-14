@@ -48,10 +48,10 @@
                                                     <rect key="frame" x="0.0" y="255" width="414" height="50"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yx8-lF-pDS">
-                                                            <rect key="frame" x="8" y="14" width="204" height="36"/>
+                                                            <rect key="frame" x="8" y="14" width="398" height="36"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="36" id="D4E-Zv-W5x"/>
-                                                                <constraint firstAttribute="width" constant="402" id="oTm-GZ-Da7"/>
+                                                                <constraint firstAttribute="width" constant="398" id="oTm-GZ-Da7"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -62,7 +62,7 @@
                                                     <constraints>
                                                         <constraint firstItem="Yx8-lF-pDS" firstAttribute="bottom" secondItem="7n4-gu-2w9" secondAttribute="bottomMargin" constant="8" id="4da-na-gDI"/>
                                                         <constraint firstItem="Yx8-lF-pDS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7n4-gu-2w9" secondAttribute="leadingMargin" id="RLE-Ep-b28"/>
-                                                        <constraint firstAttribute="trailing" secondItem="Yx8-lF-pDS" secondAttribute="trailing" constant="202" id="m3y-NF-jsA"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Yx8-lF-pDS" secondAttribute="trailing" constant="8" id="m3y-NF-jsA"/>
                                                         <constraint firstAttribute="height" constant="50" id="wEo-tN-Fee"/>
                                                     </constraints>
                                                 </view>
@@ -88,7 +88,7 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="backgroundColor" red="0.87058823529999996" green="0.44946245800000001" blue="0.098029342000000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Wrf-SF-JdR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1VW-EK-SDa"/>
                             <constraint firstItem="GKh-io-PRP" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="3zW-Cp-sf1"/>
@@ -98,7 +98,7 @@
                             <constraint firstItem="GKh-io-PRP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="okN-UA-3kN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="W3F-jS-tTh">
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="W3F-jS-tTh">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="hbE-os-ESf">
                             <rect key="frame" x="33" y="5.5" width="348" height="33"/>
@@ -135,7 +135,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oIw-GG-Qsf"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6kf-jr-Kt9" firstAttribute="trailing" secondItem="oIw-GG-Qsf" secondAttribute="trailing" id="85y-qc-DWm"/>
                             <constraint firstItem="6kf-jr-Kt9" firstAttribute="bottom" secondItem="oIw-GG-Qsf" secondAttribute="bottom" id="He3-3A-QzM"/>
@@ -156,9 +156,8 @@
         <scene sceneID="ZvD-EY-tv1">
             <objects>
                 <navigationController title="Gallery" automaticallyAdjustsScrollViewInsets="NO" id="0GH-lo-3FX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Gallery" id="RyF-iG-qh8">
-                        <imageReference key="image" image="photo.on.rectangle.angled" catalog="system" renderingMode="original"/>
-                        <imageReference key="selectedImage" image="photo.on.rectangle.fill" catalog="system" renderingMode="original"/>
+                    <tabBarItem key="tabBarItem" title="Gallery" image="photo.on.rectangle.angled" catalog="system" id="RyF-iG-qh8">
+                        <imageReference key="selectedImage" image="photo.on.rectangle.fill" catalog="system" symbolScale="large" renderingMode="original"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="mUR-p3-KDJ">
@@ -172,7 +171,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zFH-hm-J9k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="939.13043478260875" y="83.705357142857139"/>
+            <point key="canvasLocation" x="872" y="84"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="aGr-Dh-or0">
@@ -208,13 +207,43 @@
             </objects>
             <point key="canvasLocation" x="-635" y="771"/>
         </scene>
-        <!--Preferences-->
+        <!--Welcome View Controller-->
+        <scene sceneID="Y8j-uv-qAj">
+            <objects>
+                <viewController storyboardIdentifier="welcomeViewController" id="Eck-V9-0pN" customClass="WelcomeViewController" customModule="MyPhotoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sle-di-Mf9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSo-TL-ZDs">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eCs-DW-fva"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sSo-TL-ZDs" firstAttribute="top" secondItem="eCs-DW-fva" secondAttribute="top" id="BUU-i1-i8K"/>
+                            <constraint firstItem="eCs-DW-fva" firstAttribute="bottom" secondItem="sSo-TL-ZDs" secondAttribute="bottom" id="iJe-qv-Rtq"/>
+                            <constraint firstItem="eCs-DW-fva" firstAttribute="trailing" secondItem="sSo-TL-ZDs" secondAttribute="trailing" id="jR6-ZG-m0G"/>
+                            <constraint firstItem="sSo-TL-ZDs" firstAttribute="leading" secondItem="eCs-DW-fva" secondAttribute="leading" id="vvk-70-Uga"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="holderView" destination="sSo-TL-ZDs" id="HbN-2E-8Pu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tPH-he-3d8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-636" y="-684"/>
+        </scene>
+        <!--Navigation Controller-->
         <scene sceneID="YCi-a2-JZc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pFH-dp-N9M" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Preferences" id="lcJ-30-pD2">
+                    <tabBarItem key="tabBarItem" title="" id="lcJ-30-pD2">
                         <imageReference key="image" image="gearshape" catalog="system" renderingMode="original"/>
-                        <imageReference key="selectedImage" image="gearshape.fill" catalog="system" symbolScale="default" renderingMode="original"/>
+                        <imageReference key="selectedImage" image="gearshape.fill" catalog="system" symbolScale="large" renderingMode="original"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="biP-Ge-UPL">
@@ -238,9 +267,6 @@
         <image name="photo.on.rectangle.fill" catalog="system" width="128" height="96"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

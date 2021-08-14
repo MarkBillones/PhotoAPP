@@ -43,14 +43,13 @@ class PersistentController {
 //        saveContext()
         let context = persistentContainer.viewContext
         
-        let userEntity = NSEntityDescription.entity(forEntityName: "UserModel", in: context)
-        let userModel = UserModel(entity: userEntity!, insertInto: context)
-        
+        let userEntityDescription = NSEntityDescription.entity(forEntityName: "UserModel", in: context)
+        let userModel = UserModel(entity: userEntityDescription!, insertInto: context)
         userModel.name = photo.user.name
         userModel.profileImage = photo.user.profileImage.medium
         
-        let photoEntity = NSEntityDescription.entity(forEntityName: "PhotoModel", in: context)
-        let photoModel = PhotoModel(entity: photoEntity!, insertInto: context)
+        let photoEntityDescription = NSEntityDescription.entity(forEntityName: "PhotoModel", in: context)
+        let photoModel = PhotoModel(entity: photoEntityDescription!, insertInto: context)
         photoModel.url = photo.urls.regular
         photoModel.desc = photo.description
         

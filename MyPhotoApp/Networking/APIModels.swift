@@ -12,7 +12,7 @@ struct Photo: Codable {
     let urls: Url
     let user: User
 }
-
+//object Url that gets URL with value "regular"
 struct Url: Codable {
     var regular: String
 }
