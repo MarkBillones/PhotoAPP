@@ -9,8 +9,10 @@ import Foundation
 
 let baseURL = "https://api.unsplash.com"
 
+var results: [Results] = []
+
 class APIClient {
-    func fetchS(resource: String, orderBy: String = "latest", completionHandler: @escaping (Data?, URLResponse?, String?) -> Void) {
+    func fetchC(resource: String, orderBy: String = "latest", completionHandler: @escaping (Data?, URLResponse?, String?) -> Void) {
         let session = URLSession(configuration: .default)
         let url = URL(string: "\(baseURL)/\(resource)?page=\(orderBy)&per_page=30&order_by=latest&client_id=\(APIKey)")
         

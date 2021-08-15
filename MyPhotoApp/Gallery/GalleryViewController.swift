@@ -51,9 +51,9 @@ class GalleryViewController: UIViewController {
         
         switch currentFilterIndex {
         case 1:
-            view.backgroundColor = .white
+            view.backgroundColor = .lightGray
         case 2:
-            view.backgroundColor = .darkGray
+            view.backgroundColor = .white
         default:
             view.backgroundColor = .orange
         }
@@ -113,6 +113,20 @@ class GalleryViewController: UIViewController {
     
 }
 
+//standard View Controller after the Onboarding Flow
+class Core {
+    
+    static let shared = Core()
+    
+    func isNewUser() -> Bool {//to make it true
+        return !UserDefaults.standard.bool(forKey: "isNewUser")
+    }
+    //once the person has dismissd the welcome flow
+    func isNotNewUser() {
+        UserDefaults.standard.set(true, forKey: "isNewUser")
+    }
+}
+
 extension GalleryViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photos.count
@@ -137,19 +151,4 @@ extension GalleryViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return  CGSize(width: screenSize.size.width, height: 400) //custom screen height 300pts
     }
-}
-
-//standard View Controller after the Onboarding Flow
-class Core {
-    
-    static let shared = Core()
-    
-    func isNewUser() -> Bool {//to make it true
-        return !UserDefaults.standard.bool(forKey: "isNewUser")
-    }
-    //once the person has dismissd the welcome flow
-    func isNotNewUser() {
-        UserDefaults.standard.set(true, forKey: "isNewUser")
-    }
-    
 }
