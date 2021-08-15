@@ -48,6 +48,16 @@ class GalleryViewController: UIViewController {
     @IBAction func filterChanged(_ sender: UISegmentedControl) {
         let segmentedControl = sender
         currentFilterIndex =  segmentedControl.selectedSegmentIndex
+        
+        switch currentFilterIndex {
+        case 1:
+            view.backgroundColor = .white
+        case 2:
+            view.backgroundColor = .darkGray
+        default:
+            view.backgroundColor = .orange
+        }
+        
         fetchPhotos()
     }
     

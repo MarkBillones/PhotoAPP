@@ -8,3 +8,5 @@
 import Foundation
 
 let APIKey = "G6sbNKHQ9Mg1fxnRYp42Pco6qpDM5qD6Icxk5RI9gRI"
+
+let searchBaseURL = "https://api.unsplash.com/search/photos?page=1&per_page=30&query=office&client_id=NQvBj-m0BsSTSTWjmtLa5V6vd2L1US55qcUjmslLUts"

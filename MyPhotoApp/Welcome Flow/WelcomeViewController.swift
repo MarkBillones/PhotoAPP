@@ -27,7 +27,7 @@ class WelcomeViewController: UIViewController {
         //set up the scroll view
         scrollView.frame = holderView.bounds
         holderView.addSubview(scrollView)
-        let titles: [String] = ["Welcome", "Location", "Start Browsing"]
+        let titles: [String] = ["Welcome", "Special Thanks to", "Enjoy Browsing"]
         
         for indexNumber in 0..<3 {
             let pageView = UIView(frame: CGRect(
@@ -50,7 +50,7 @@ class WelcomeViewController: UIViewController {
                     x     : 60,
                     y     : 190,
                     width : pageView.frame.width - 120,
-                    height: pageView.frame.height - 420)
+                    height: pageView.frame.height - 400)
             )
             
             let button = UIButton(

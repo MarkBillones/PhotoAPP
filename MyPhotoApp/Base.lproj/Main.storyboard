@@ -194,12 +194,24 @@
         <!--Preferences-->
         <scene sceneID="X9e-4K-O7z">
             <objects>
-                <viewController title="Preferences" id="kaW-SB-jGR" sceneMemberID="viewController">
+                <viewController title="Preferences" id="kaW-SB-jGR" customClass="ImageSearchViewController" customModule="MyPhotoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mRA-ld-0oP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOADING..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWA-46-OoO">
+                                <rect key="frame" x="142.5" y="431.5" width="129" height="33"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="nan-R5-LS9"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UWA-46-OoO" firstAttribute="centerX" secondItem="mRA-ld-0oP" secondAttribute="centerX" id="6B8-7f-lVj"/>
+                            <constraint firstItem="UWA-46-OoO" firstAttribute="centerY" secondItem="mRA-ld-0oP" secondAttribute="centerY" id="r4D-Is-49y"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uXC-UV-to0"/>
                 </viewController>
@@ -237,13 +249,13 @@
             </objects>
             <point key="canvasLocation" x="-636" y="-684"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Search-->
         <scene sceneID="YCi-a2-JZc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pFH-dp-N9M" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="lcJ-30-pD2">
-                        <imageReference key="image" image="gearshape" catalog="system" renderingMode="original"/>
-                        <imageReference key="selectedImage" image="gearshape.fill" catalog="system" symbolScale="large" renderingMode="original"/>
+                    <tabBarItem key="tabBarItem" title="Search" id="lcJ-30-pD2">
+                        <imageReference key="image" image="viewfinder.circle" catalog="system" symbolScale="large" renderingMode="original"/>
+                        <imageReference key="selectedImage" image="viewfinder.circle.fill" catalog="system" symbolScale="large" renderingMode="original"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="biP-Ge-UPL">
@@ -261,10 +273,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="gearshape" catalog="system" width="128" height="121"/>
-        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="photo.on.rectangle.angled" catalog="system" width="128" height="101"/>
         <image name="photo.on.rectangle.fill" catalog="system" width="128" height="96"/>
+        <image name="viewfinder.circle" catalog="system" width="128" height="121"/>
+        <image name="viewfinder.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
