@@ -32,11 +32,11 @@
                                     <constraint firstAttribute="width" constant="216" id="W6X-RD-fHq"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-logo" translatesAutoresizingMaskIntoConstraints="NO" id="9bF-MQ-eaK">
-                                <rect key="frame" x="30" y="364" width="354" height="168"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-logo" translatesAutoresizingMaskIntoConstraints="NO" id="9bF-MQ-eaK">
+                                <rect key="frame" x="99" y="355.5" width="216" height="185"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="354" id="SXM-Vi-YDW"/>
-                                    <constraint firstAttribute="height" constant="168" id="okO-iQ-c7W"/>
+                                    <constraint firstAttribute="width" constant="216" id="SXM-Vi-YDW"/>
+                                    <constraint firstAttribute="height" constant="185" id="okO-iQ-c7W"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -58,7 +58,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="splash-logo" width="205" height="107"/>
+        <image name="splash-logo" width="60" height="60"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

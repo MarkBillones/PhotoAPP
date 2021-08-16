@@ -95,7 +95,6 @@ class GalleryViewController: UIViewController {
                         for photo in self.photos {
                             DB.insertPhoto(photo)
                         }
-                        
                     } else {
                         self.photos = [Photo]()
                     }
@@ -110,7 +109,6 @@ class GalleryViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
     }
-    
 }
 
 //standard View Controller after the Onboarding Flow

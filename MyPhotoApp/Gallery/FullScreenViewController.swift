@@ -10,12 +10,12 @@ import Kingfisher
 
 class FullScreenViewController: UIViewController {
     var imageURL: String!
+    var imageDesc: String!
     
     @IBOutlet weak var imageView: UIImageView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.imageView.kf.setImage(with: URL(string: imageURL))
     }
     

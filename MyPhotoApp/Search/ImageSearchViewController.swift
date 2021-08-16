@@ -31,7 +31,6 @@ class ImageSearchViewController: UIViewController, UICollectionViewDataSource, U
             results = []
             collectionView?.reloadData()
             fetchPhotos(query: text)
-            
         }
     }
     
@@ -84,14 +83,16 @@ class ImageSearchViewController: UIViewController, UICollectionViewDataSource, U
     //Type 'ViewController'conform to protocol 'UICollectionView', so this is a conformance of ViewController
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return results.count
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let imageURLString = results[indexPath.row].urls.regular
+        
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.identifier, for: indexPath) as? ImageCollectionViewCell else {
             return UICollectionViewCell()
         }
+        
         cell.configure(with: imageURLString)
         cell.backgroundColor = .orange
         return cell
@@ -100,5 +101,4 @@ class ImageSearchViewController: UIViewController, UICollectionViewDataSource, U
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath)
     }
-    
 }

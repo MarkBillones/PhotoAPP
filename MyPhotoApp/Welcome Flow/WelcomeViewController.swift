@@ -102,5 +102,4 @@ class WelcomeViewController: UIViewController {
         // scroll to the next page
         scrollView.setContentOffset(CGPoint(x: holderView.frame.width * CGFloat(button.tag), y: 0), animated: true)
     }
-
 }

@@ -37,10 +37,6 @@ class PersistentController {
     }
     
     func insertPhoto(_ photo: Photo) {
-//        let photoEntity = NSEntityDescription.entity(forEntityName: "PhotoModel", in: self.persistentContainer.viewContext)
-//        let model = PhotoModel(entity: photoEntity!, insertInto: self.persistentContainer.viewContext)
-//        model.url = photo.urls.regular
-//        saveContext()
         let context = persistentContainer.viewContext
         
         let userEntityDescription = NSEntityDescription.entity(forEntityName: "UserModel", in: context)
